@@ -1,5 +1,5 @@
 <?php
-$url = trim($_POST['url']); // Отправляем скрипту POST-запрос с длинной ссылкой
+$url = trim($_GET['url']); // Отправляем скрипту GET-запрос с длинной ссылкой (пример: json-api.php?url=http://vasassilka.ru)
 if(!preg_match("#^https?://#iU",$url)) $url= "http://".$url;
 
 if (!$url) { header("Location: ". $_SERVER['PHP_SELF'] . ""); }
